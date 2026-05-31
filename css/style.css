@@ -1,0 +1,218 @@
+:root {
+    /* L4D2 Color Palette */
+    --color-bg: #0a0a0a;
+    --color-primary: #af3c3e; /* Carmine Red */
+    --color-secondary: #8c3f36; /* Sanguine Brown */
+    --color-text: #e0e0e0;
+    --color-text-dim: #706f6b; /* Ironside Gray */
+    --color-accent: #f1c40f; /* Flashlight Yellow */
+    --color-blood: #8b0000;
+    
+    /* Fonts - Using generic fallbacks that match the vibe */
+    --font-main: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    --font-heading: 'Impact', 'Arial Black', sans-serif;
+    --font-accent: 'Courier New', Courier, monospace; /* For that handwritten/graffiti feel */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)),
+        url('https://www.transparenttextures.com/patterns/dark-matter.png');
+}
+
+/* Kinetic Interactions & Animations */
+@keyframes flicker {
+    0% { opacity: 0.9; }
+    5% { opacity: 0.5; }
+    10% { opacity: 0.9; }
+    15% { opacity: 0.8; }
+    20% { opacity: 0.9; }
+    25% { opacity: 0.3; }
+    30% { opacity: 0.9; }
+    100% { opacity: 0.9; }
+}
+
+.l4d-flicker {
+    animation: flicker 4s infinite;
+}
+
+.l4d-glitch:hover {
+    text-shadow: 2px 0 var(--color-primary), -2px 0 #00fff9;
+}
+
+/* Global Layout */
+header {
+    padding: 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+nav a {
+    color: var(--color-text);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    transition: color 0.3s, transform 0.3s;
+    cursor: pointer;
+}
+
+nav a:hover, nav a.active {
+    color: var(--color-primary);
+    transform: skew(-10deg);
+}
+
+main {
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* UI Elements inspired by L4D2 */
+.l4d-box {
+    background: rgba(20, 20, 20, 0.8);
+    border: 2px solid var(--color-text-dim);
+    padding: 2rem;
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.l4d-box::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    width: 20px;
+    height: 20px;
+    border-top: 3px solid var(--color-primary);
+    border-left: 3px solid var(--color-primary);
+}
+
+.l4d-box::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+    width: 20px;
+    height: 20px;
+    border-bottom: 3px solid var(--color-primary);
+    border-right: 3px solid var(--color-primary);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #050505;
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--color-primary);
+    border: 2px solid #050505;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--color-secondary);
+}
+
+/* Kinetic Buttons */
+.l4d-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+    transition: all 0.2s;
+}
+
+.l4d-btn:hover {
+    background: white;
+    color: var(--color-primary);
+    transform: scale(1.05);
+}
+
+/* Blood Splatter Effect (Decorative) */
+.blood-splatter {
+    position: absolute;
+    background: var(--color-blood);
+    filter: blur(10px);
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.placeholder-img {
+    background: #1a1a1a;
+    border: 1px dashed var(--color-text-dim);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-dim);
+    position: relative;
+    overflow: hidden;
+}
+
+.placeholder-img::after {
+    content: 'IMAGE PLACEHOLDER';
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    opacity: 0.3;
+}
+
+footer {
+    padding: 2rem;
+    text-align: center;
+    color: var(--color-text-dim);
+    font-size: 0.8rem;
+    border-top: 1px solid #222;
+}
+
+/* Page Transitions */
+.page {
+    display: none;
+    animation: fadeIn 0.5s ease-out forwards;
+}
+
+.page.active {
+    display: block;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}

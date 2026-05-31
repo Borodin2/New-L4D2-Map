@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L4D2 Map Mod | Promotional Site</title>
+    <link rel="stylesheet" href="css/style.css">
+     <link rel="stylesheet" href="css/YsunButton.css">
+</head>
+<body>
+    <header>
+        <div class="logo l4d-glitch" style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary);">
+            MTA <span style="color: white;">TRAIN</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a onclick="showPage('home')" id="nav-home" class="active">Home</a></li>
+                <li><a onclick="showPage('details')" id="nav-details">Details</a></li>
+               <li><a onclick="showPage('credits')" id="nav-credits">Credits</a></li>
+               <li><a onclick="disableFlashlight(event)" id="nav-fog">Turn off fog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Home Page -->
+        <section id="home" class="page active">
+            <div class="container">
+                <div class="hero" style="text-align: center; padding: 4rem 0; position: relative;">
+                    <div class="blood-splatter" style="width: 200px; height: 200px; top: 10%; left: 20%;"></div>
+                    <div class="blood-splatter" style="width: 150px; height: 150px; bottom: 10%; right: 25%;"></div>
+                    <h1 class="l4d-flicker" style="font-family: var(--font-heading); font-size: 5rem; margin-bottom: 1rem; text-transform: uppercase; text-shadow: 4px 4px 0px black;">Survive the Night</h1>
+                    <p style="font-size: 1.5rem; color: var(--color-text-dim); margin-bottom: 2rem;">A New Survival Map for Left 4 Dead 2</p>
+                    <button class="l4d-btn" onclick="showPage('details')">Explore Hold Out</button>
+                </div>
+                
+                <div class="l4d-box" style="margin-bottom: 3rem;">
+                    <h2 style="font-family: var(--font-heading); margin-bottom: 1rem; color: var(--color-primary);">HOLD OUT OVERVIEW</h2>
+                    <p>We freature a brand new experience within the map, allowing people to experience a hold out in their favorite subways, featuring rich props and features. cause remeber, Its not always sunny in the subways.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
+                    <div class="placeholder-img" style="height: 300px;"></div>
+                    <div class="placeholder-img" style="height: 300px;"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Details Page -->
+        <section id="details" class="page">
+            <div class="container">
+                <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 2rem; border-bottom: 4px solid var(--color-primary); display: inline-block;">MAP DETAILS</h1>
+                
+                <div id="features-container">
+                    <!-- Modular Feature Block Template -->
+                    <!-- To add a new feature, copy the div.feature-block and adjust content -->
+                    
+                    <div class="feature-block l4d-box" style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                        <div class="placeholder-img" style="height: 300px; box-shadow: inset 0 0 50px black;"></div>
+                        <div class="feature-content">
+                            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-transform: uppercase;">01. Immersive Atmosphere</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet.</p>
+                            <ul style="list-style: square; color: var(--color-text-dim); padding-left: 1.5rem;">
+                                <li>Custom dynamic lighting systems</li>
+                                <li>High-fidelity environmental textures</li>
+                                <li>Dynamic weather effects integration</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="feature-block l4d-box" style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                        <div class="feature-content">
+                            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-transform: uppercase;">02. Strategic Level Design</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text);">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            <ul style="list-style: square; color: var(--color-text-dim); padding-left: 1.5rem;">
+                                <li>innovative urban transit</li>
+                                <li>efficient infrastructure and seamless connectivity</li>
+                                <li>Interactive environmental hazards</li>
+                            </ul>
+                        </div>
+                        <div class="placeholder-img" style="height: 300px; box-shadow: inset 0 0 50px black;"></div>
+                    </div>
+
+                    <div class="feature-block l4d-box" style="margin-bottom: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                        <div class="placeholder-img" style="height: 300px; box-shadow: inset 0 0 50px black;"></div>
+                        <div class="feature-content">
+                            <h3 style="font-family: var(--font-heading); font-size: 2rem; color: var(--color-primary); margin-bottom: 1rem; text-transform: uppercase;">03. Custom Scripted Events</h3>
+                            <p style="margin-bottom: 1.5rem; color: var(--color-text);">Curabitur pretium tincidunt lacus. Nulla gravida orci a odio. Nullam varius, turpis et commodo pharetra, est eros bibendum elit, nec luctus magna felis sollicitudin mauris.</p>
+                            <ul style="list-style: square; color: var(--color-text-dim); padding-left: 1.5rem;">
+                                <li>good old fashioned gunplay</li>
+                                <li>Dynamic space for unique interactions</li>
+                                <li>Not so healthy citizens, you get to shoot</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Credits Page -->
+        <section id="credits" class="page">
+            <div class="container">
+                <h1 style="font-family: var(--font-heading); font-size: 3rem; margin-bottom: 3rem; text-align: center;">THE SURVIVORS (CREATORS)</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
+                    <!-- Creator 1 -->
+                    <div class="creator-card l4d-box" style="text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="placeholder-img" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1.5rem; border: 4px solid var(--color-primary); background: url('https://via.placeholder.com/150/000000/FFFFFF?text=SURVIVOR+1') center/cover;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: white; text-shadow: 2px 2px 0 var(--color-primary);">Brandon T. Diaz "Programmer/Researcher"</h3>
+                        <p style="font-family: var(--font-accent); color: var(--color-accent); margin-bottom: 1.5rem; font-style: italic;">"Lorem ipsum"</p>
+                        <div style="text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-left: 3px solid var(--color-primary);">
+                            <strong style="display: block; color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">Contribution</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+
+                    <!-- Creator 2 -->
+                    <div class="creator-card l4d-box" style="text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="placeholder-img" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1.5rem; border: 4px solid var(--color-primary); background: url('https://via.placeholder.com/150/000000/FFFFFF?text=SURVIVOR+2') center/cover;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: white; text-shadow: 2px 2px 0 var(--color-primary);">Dylan D. Diep "Lead/Builder"</h3>
+                        <p style="font-family: var(--font-accent); color: var(--color-accent); margin-bottom: 1.5rem; font-style: italic;">"Lorem Ipsum "</p>
+                        <div style="text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-left: 3px solid var(--color-primary);">
+                            <strong style="display: block; color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">Contribution</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                        </div>
+                    </div>
+
+                    <!-- Creator 3 -->
+                    <div class="creator-card l4d-box" style="text-align: center; transition: transform 0.3s; cursor: pointer;" onmouseover="this.style.transform='translateY(-10px)'" onmouseout="this.style.transform='translateY(0)'">
+                        <div class="placeholder-img" style="width: 150px; height: 150px; border-radius: 50%; margin: 0 auto 1.5rem; border: 4px solid var(--color-primary); background: url('https://via.placeholder.com/150/000000/FFFFFF?text=SURVIVOR+3') center/cover;"></div>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: white; text-shadow: 2px 2px 0 var(--color-primary);">Samuel H. Shazam "Builder/Researcher"</h3>
+                        <p style="font-family: var(--font-accent); color: var(--color-accent); margin-bottom: 1.5rem; font-style: italic;">"Lorem Ipsum"</p>
+                        <div style="text-align: left; background: rgba(0,0,0,0.4); padding: 1rem; border-left: 3px solid var(--color-primary);">
+                            <strong style="display: block; color: var(--color-primary); font-size: 0.8rem; text-transform: uppercase; margin-bottom: 0.5rem;">Contribution</strong>
+                            <p style="font-size: 0.9rem; color: var(--color-text);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Map Mod Team. Not affiliated with Valve Corporation. Left 4 Dead 2 is a trademark of Valve Corporation.</p>
+        <button onclick="window.location.href='sunny.html'"> 
+  <div class="svg-wrapper-1"> 
+    <div class="svg-wrapper"> 
+
+      <svg xmlns="http://w3.org" viewBox="0 0 24 24" width="30" height="30" class="icon">
+        <path d="M12,7c-2.76,0-5,2.24-5,5s2.24,5,5,5,5-2.24,5-5-2.24-5-5-5ZM2,13h2c.55,0,1-.45,1-1s-.45-1-1-1H2c-.55,0-1,.45-1,1s.45,1,1,1ZM20,13h2c.55,0,1-.45,1-1s-.45-1-1-1h-2c-.55,0-1,.45-1,1s.45,1,1,1ZM11,2v2c0,.55,.45,1,1,1s1-.45,1-1V2c0-.55-.45-1-1-1s-1,.45-1,1ZM11,20v2c0,.55,.45,1,1,1s1-.45,1-1v-2c0-.55-.45-1-1-1s-1,.45-1,1ZM5.99,4.58c-.39-.39-1.03-.39-1.41,0s-.39,1.03,0,1.41l1.06,1.06c.39,.39,1.03,.39,1.41,0s-.39-1.03,0-1.41l-1.06-1.06ZM16.95,15.54c-.39-.39-1.03-.39-1.41,0s-.39,1.03,0,1.41l1.06,1.06c.39,.39,1.03,.39,1.41,0s-.39-1.03,0-1.41l-1.06-1.06ZM5.64,16.95l-1.06,1.06c-.39,.39-.39,1.03,0,1.41s1.03,.39,1.41,0l1.06-1.06c.39-.39,.39-1.03,0-1.41s-1.03-.39-1.41,0ZM16.59,5.64l1.06-1.06c.39-.39,.39-1.03,0-1.41s-1.03-.39-1.41,0l-1.06,1.06c-.39,.39-.39,1.03,0,1.41s1.03,.39,1.41,0Z"/>
+      </svg>
+    </div> 
+  </div> 
+  <span></span> 
+</button>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

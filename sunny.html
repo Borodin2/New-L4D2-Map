@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sunny | MTA Train</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #000;
+            overflow: hidden;
+        }
+
+        video {
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            background: #000;
+        }
+    </style>
+</head>
+<body>
+    <video id="sunny-video" playsinline>
+        <source src="sunnier.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <script src="js/sunny.js"></script>
+</body>
+</html>
